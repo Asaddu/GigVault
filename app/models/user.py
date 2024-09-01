@@ -1,5 +1,7 @@
+# app/models/user.py
+
 from sqlalchemy import Column, String, Text, Integer
-from . import Base  # Import Base from the __init__.py to maintain consistency
+from .db import Base
 
 class User(Base):
     __tablename__ = 'users'

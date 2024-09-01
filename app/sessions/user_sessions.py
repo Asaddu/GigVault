@@ -1,7 +1,8 @@
 # app/sessions/user_sessions.py
 
 import json
-from app.models import Session, User
+from app.models.db import Session
+from app.models.user import User
 
 def save_user_google_credentials(user_email, credentials):
     session = Session()

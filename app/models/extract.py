@@ -1,7 +1,7 @@
 # app/models/extract.py
 
 from config.scopes import SCOPES
-from app.models import Session, Email  # Import from __init__.py
+from . import Session, Email  # Import from __init__.py
 from datetime import datetime
 from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials

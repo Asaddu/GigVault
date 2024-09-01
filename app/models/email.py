@@ -1,5 +1,7 @@
+# app/models/email.py
+
 from sqlalchemy import Column, String, Text, Integer, DateTime
-from . import Base  # Import Base from the __init__.py
+from .db import Base
 
 class Email(Base):
     __tablename__ = 'emails'

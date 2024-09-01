@@ -1,8 +1,8 @@
-# /app/routes/lastfm_routes.py
+# app/routes/lastfm_routes.py
 
 from flask import Blueprint, redirect, url_for, session, request
 from app.integrations.lastfm import initialize_lastfm, finalize_lastfm_login, get_lastfm_artists
-from app.models import save_user_lastfm_credentials  # Assuming this function is implemented to save Last.fm credentials
+from app.sessions.user_sessions import save_user_lastfm_credentials
 
 lastfm_bp = Blueprint('lastfm', __name__)
 

@@ -1,11 +1,9 @@
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from .user import Base, User
-from .email import Email
+# app/models/__init__.py
 
-DATABASE_URI = 'sqlite:///data/email_data_lake.db'  # Define your database URI
-engine = create_engine(DATABASE_URI)
-Session = sessionmaker(bind=engine)
+from .db import Base, engine
+from .user import User
+from .email import Email
+from .db import Session
 
 def init_db():
     Base.metadata.create_all(engine)
