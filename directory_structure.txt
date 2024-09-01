@@ -1,0 +1,59 @@
+.
+├── app
+│   ├── app.py
+│   ├── __init__.py
+│   ├── integrations
+│   │   ├── google.py
+│   │   ├── __init__.py
+│   │   └── lastfm.py
+│   ├── models
+│   │   ├── data_lake.py
+│   │   ├── extract.py
+│   │   └── __init__.py
+│   ├── routes
+│   │   ├── google_routes.py
+│   │   ├── __init__.py
+│   │   └── lastfm_routes.py
+│   └── utils
+│       ├── filters.py
+│       └── __init__.py
+├── config
+├── data
+├── directory_structure.txt
+├── .env
+│   └── credentials.json
+├── run.py
+└── venv
+    ├── bin
+    │   ├── activate
+    │   ├── activate.csh
+    │   ├── activate.fish
+    │   ├── Activate.ps1
+    │   ├── dotenv
+    │   ├── f2py
+    │   ├── flask
+    │   ├── google-oauthlib-tool
+    │   ├── httpx
+    │   ├── normalizer
+    │   ├── numpy-config
+    │   ├── pip
+    │   ├── pip3
+    │   ├── pip3.11
+    │   ├── pyrsa-decrypt
+    │   ├── pyrsa-encrypt
+    │   ├── pyrsa-keygen
+    │   ├── pyrsa-priv2pub
+    │   ├── pyrsa-sign
+    │   ├── pyrsa-verify
+    │   ├── python -> python3.11
+    │   ├── python3 -> python3.11
+    │   └── python3.11 -> /usr/bin/python3.11
+    ├── include
+    │   ├── python3.11
+    │   └── site
+    ├── lib
+    │   └── python3.11
+    ├── lib64 -> lib
+    └── pyvenv.cfg
+
+17 directories, 40 files
