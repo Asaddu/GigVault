@@ -1,7 +1,7 @@
-# data/extract.py
+# app/models/extract.py
 
 from config.scopes import SCOPES
-from app.models.data_lake import Email, Session  # Importing from data_lake.py
+from app.models import Session, Email  # Import from __init__.py
 from datetime import datetime
 from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
@@ -38,9 +38,9 @@ def extract_event_data(credentials):
         raw_data = msg  # You can store the raw JSON data if needed
 
         # Save to database
-        save_email_to_db(sender, subject, body, received_date, raw_data)
+        save_email_to_db(user_id='some_user_id', sender=sender, subject=subject, body=body, received_date=received_date, raw_data=raw_data)
 
 if __name__ == '__main__':
-    # Assuming you have a way to load your Google credentials
     creds = Credentials.from_authorized_user_file('path_to_token.json', SCOPES)
     extract_event_data(creds)
+
